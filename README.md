@@ -1,135 +1,85 @@
-# 🌲 Flowstate — Premium Pomodoro Productivity Web App
+# Flowstate — Pomodoro Productivity Web Application
 
-A distraction-free, aesthetic Pomodoro focus timer and productivity tracker inspired by serene deep-woods atmospheres. Built with pure React, modern standard CSS variables, Web Audio synthesis, and persistent client-side storage.
+A distraction-free Pomodoro focus timer and productivity tracking application with forest-inspired aesthetics. Built with React, modular standard CSS stylesheets, Web Audio API sound synthesis, and persistent client-side storage.
 
-🔗 **Live Deployment:** [https://ais-pre-6ybs2tcanncoeaslzuajhw-929894199263.asia-southeast1.run.app](https://ais-pre-6ybs2tcanncoeaslzuajhw-929894199263.asia-southeast1.run.app)
-
----
-
-## ✨ Core Features
-
-### 1. ⏱️ Drift-Free Precision Pomodoro Timer
-- **Modes**: Focus (default 25m), Short Break (5m), and Long Break (15m).
-- **Controls**: Smooth Start, Pause, Resume, Reset, and Skip cycle buttons.
-- **Drift Prevention**: Uses delta timestamps (`Date.now()`) to prevent timer drift across background tab inactivity and system sleep.
-- **Cycle Transitions**: Smoothly cycles between Focus, Short Break, and Long Break intervals.
-
-### 2. 🌲 Forest Atmosphere & Aesthetics
-- Crisp, human-crafted geometry (no AI-style hyper-rounded pills).
-- Natural evergreen and pine backdrops with subtle atmospheric vignettes.
-- 4 Forest Themes: *Pine Canopy*, *Misty Timber*, *Dusk Woodlands*, and *Deep Evergreen*.
-
-### 3. 📋 Functional Task Manager
-- Create, edit, prioritize (High, Medium, Low), and complete tasks.
-- Track estimated vs. completed Pomodoro sessions per task.
-- Directly connect any task to the active focus session timer.
-
-### 4. ⚡ XP & Level Progression System
-- Earn XP proportionally to completed deep focus duration (25 XP for 25 minutes).
-- Non-linear leveling curve with leveling celebrations.
-- Visual XP progress bar and level badges.
-
-### 5. 📅 Local Streak Calendar
-- Monthly visual calendar highlighting authentic days of focus activity.
-- Consecutive day streak tracking (Current Streak and Longest Streak).
-- Calculated entirely from local calendar dates.
-
-### 6. 📊 Authentic Productivity Analytics
-- Filterable stats (Today, 7 Days, 30 Days, All Time).
-- Focus time totals, completed sessions count, recovery intervals taken, and tasks completed.
-- 7-Day interactive activity bar chart.
-
-### 7. 🏆 Milestones & Achievements
-- Unlockable badges for milestones (First Step, Focus Momentum, Deep Diver, Unstoppable Habit, Centurion of Focus, Flowstate Master).
-- Live progress tracking and timestamped unlock records.
-
-### 8. 🔔 Ambient Audio & System Alerts
-- Web Audio API harmonic chime synthesizer (zero external audio file dependencies).
-- Browser notification support for background session completion alerts.
+Public Application URL: https://ais-pre-6ybs2tcanncoeaslzuajhw-929894199263.asia-southeast1.run.app
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Frontend**: React 19 (ES6+ standard JavaScript)
-- **Styling**: Standard CSS with CSS variables (`src/styles/`), responsive flex/grid layouts
-- **Icons**: Lucide React
-- **Audio**: Web Audio API oscillator synthesis
-- **Storage**: Browser LocalStorage with automatic schema versioning
-- **Build Tool**: Vite
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or bun
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/flowstate.git
-cd flowstate
-
-# 2. Install dependencies
-npm install
-
-# 3. Start local development server
-npm run dev
-```
-
-Visit `http://localhost:3000` or the port shown in your terminal.
-
-### Production Build
-
-```bash
-npm run build
-npm run preview
-```
+- Frontend Framework: React 19 (JavaScript ES6+)
+- Build Tool and Dev Server: Vite
+- Styling: Standard modular CSS with CSS variables (no Tailwind CSS, no CSS-in-JS)
+- Icons: Lucide React
+- Audio Synthesis: Native Web Audio API oscillator synthesis (no external audio asset dependencies)
+- Persistence: LocalStorage with versioned schemas and data validation
+- Notifications: Native Web Notifications API
 
 ---
 
-## 📂 Project Structure
+## Features
 
-```
-├── index.html                 # HTML entry with typography links
-├── package.json               # Dependencies and scripts
-├── vite.config.ts             # Vite configuration
-├── src/
-│   ├── main.jsx               # React entry point
-│   ├── App.jsx                # Root app state & navigation
-│   ├── index.css              # Global styles entry
-│   ├── assets/                # Forest aesthetic photography
-│   ├── components/
-│   │   ├── FocusTimer.jsx     # Hero Pomodoro clock & controls
-│   │   ├── Header.jsx         # App header with streak & XP
-│   │   ├── BottomDock.jsx     # Dock navigation controls
-│   │   ├── NavigationSidebar.jsx # Main menu drawer
-│   │   ├── QuickTasksDrawer.jsx  # Slide-out task manager
-│   │   ├── QuickNotesDrawer.jsx  # Scratchpad notepad
-│   │   ├── QuickThemesDrawer.jsx # Ambience theme switcher
-│   │   ├── RewardModal.jsx    # Session & Level-up celebration modal
-│   │   └── ConfirmModal.jsx   # Data reset confirmation dialog
-│   ├── hooks/
-│   │   └── useTimer.js        # Timestamp-based drift-free timer engine
-│   ├── pages/
-│   │   ├── DashboardPage.jsx  # Primary Focus Dashboard
-│   │   ├── TasksPage.jsx      # Full Task Manager
-│   │   ├── StatisticsPage.jsx # Productivity Analytics & Charts
-│   │   ├── CalendarPage.jsx   # Streak Calendar
-│   │   ├── AchievementsPage.jsx # Unlocks & Milestones
-│   │   └── SettingsPage.jsx   # Timer, Audio, & Theme Preferences
-│   ├── styles/                # Modular standard stylesheets
-│   └── utils/
-│       ├── audio.js           # Web Audio API chime sound generator
-│       ├── notifications.js   # Browser notifications helper
-│       ├── storage.js         # LocalStorage persistence & XP engine
-│       └── streak.js          # Streak calculation algorithms
-```
+### 1. Drift-Free Precision Pomodoro Timer
+- Three operational modes: Focus (25m default), Short Break (5m default), and Long Break (15m default).
+- Dynamic mode cycle: Sequential progression through Focus, Short Break, Long Break, and back to Focus.
+- Drift-proof timekeeping: Uses timestamp delta calculations (Date.now()) against target completion times to prevent clock drift during tab throttling, backgrounding, or system sleep.
+- Timer controls: Start, Pause, Resume, Reset, and Skip.
+- Mode tabs: Direct switching between Focus, Short Break, and Long Break at any point.
+
+### 2. Forest Aesthetic Ambience
+- Natural deep woodland visuals and atmospheric vignette overlays.
+- Color palette based on deep pines, moss greens, warm timber ambers, and dark spruce surfaces.
+- Geometric, crisp container architecture avoiding artificial pill shapes.
+- Four selectable atmospheric themes: Pine Canopy, Misty Timber, Dusk Woodlands, and Deep Evergreen.
+
+### 3. Task Management
+- Create, update, prioritize, and delete tasks.
+- Associate active tasks directly with focus sessions.
+- Track completed Pomodoro sessions against estimated target sessions per task.
+- Filter tasks by status: All, Active, Completed, and High Priority.
+- Quick slide-out task drawer accessible from the focus dashboard.
+
+### 4. Experience Points (XP) and Level Progression
+- XP earned proportionally to completed deep focus duration (25 XP per 25 minutes of focus).
+- Progressive leveling thresholds requiring increasing XP for higher tiers.
+- Completion reward modal displaying session duration, XP earned, total XP, and progress toward the next tier.
+- Celebration state triggered upon leveling up.
+- Zero XP awarded for break sessions, abandoned timers, or skipped periods.
+
+### 5. Streak Calendar
+- Monthly calendar matrix displaying historical activity.
+- Daily focus session tracking with session count and total focus minutes per day.
+- Consecutive day streak tracking calculating current streak and longest recorded streak based on local calendar dates.
+- Interactive month navigation with quick return to the current date.
+
+### 6. Productivity Statistics and Analytics
+- Time-frame filters: Today, 7 Days, 30 Days, and All Time.
+- High-contrast metric cards: Current Streak, Deep Focus Time, Total XP, Tasks Completed, Completed Sessions, and Mindful Recovery Time.
+- Seven-day interactive activity bar chart visualizing daily focus distribution.
+
+### 7. Milestones and Achievements
+- Six unlockable achievements: First Step, Focus Momentum, Deep Diver, Unstoppable Habit, Centurion of Focus, and Flowstate Master.
+- Live requirement checks, progress bars, and timestamped unlock records.
+
+### 8. Audio and Notifications
+- Synthesized resonant chime using Web Audio API harmonic sine waves upon session completion.
+- Separate fanfare sound effect on level-up.
+- Master volume controls and mute toggles.
+- Desktop browser notifications with explicit permission handling.
+
+### 9. Quick Scratchpad
+- Non-intrusive drawer to jot quick notes, thoughts, or brain dumps without leaving the focus state.
+- Real-time word and character counter.
+- Persistent automatic saving to LocalStorage.
+
+### 10. Settings and Data Integrity
+- Fully customizable durations for Focus, Short Break, and Long Break.
+- Configurable long break intervals.
+- Automation toggles for auto-starting breaks and auto-starting focus sessions.
+- Theme selector and reduced-motion support.
+- Hard reset option with confirmation dialogue to clear all stored application data.
 
 ---
 
-## 📄 License
-MIT License. Free to use and customize.
+## Project Structure
