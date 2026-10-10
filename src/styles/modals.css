@@ -1,0 +1,168 @@
+/* Reward & Celebration Modals - Forest Aesthetic */
+
+.reward-modal-card {
+  max-width: 480px;
+  width: 90%;
+  background: #0a140f;
+  border: 1px solid rgba(233, 196, 106, 0.35);
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 25px rgba(233, 196, 106, 0.15);
+  padding: 2.25rem;
+  text-align: center;
+  position: relative;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reward-badge-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-xs);
+  background: linear-gradient(135deg, rgba(233, 196, 106, 0.25) 0%, rgba(212, 163, 115, 0.1) 100%);
+  border: 1.5px solid #e9c46a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 0 20px rgba(233, 196, 106, 0.25);
+  color: #e9c46a;
+}
+
+.reward-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.reward-subtitle {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.reward-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.reward-stat-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xs);
+  padding: 0.85rem;
+  text-align: left;
+}
+
+.reward-stat-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.reward-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.level-progress-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xs);
+  padding: 1rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+
+.level-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.level-progress-track {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+}
+
+.level-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #d4a373, #e9c46a);
+  border-radius: var(--radius-xs);
+  transition: width 0.4s ease;
+}
+
+.reward-cta-btn {
+  width: 100%;
+  background: #e9c46a;
+  color: #070e0a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 6px 20px rgba(233, 196, 106, 0.25);
+}
+
+.reward-cta-btn:hover {
+  background: #f4d382;
+  transform: translateY(-1px);
+}
+
+/* Level Up Banner */
+.level-up-banner {
+  background: linear-gradient(135deg, rgba(45, 106, 79, 0.4) 0%, rgba(233, 196, 106, 0.3) 100%);
+  border: 1px solid #e9c46a;
+  border-radius: var(--radius-xs);
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Confirmation Dialog */
+.confirm-dialog-card {
+  max-width: 440px;
+  width: 90%;
+  background: #0a140f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+}
+
+.confirm-actions-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-btn-cancel {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+}
+
+.confirm-btn-danger {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: var(--radius-xs);
+  background: #f43f5e;
+  color: #ffffff;
+  font-weight: 700;
+}

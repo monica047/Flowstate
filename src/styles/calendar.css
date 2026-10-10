@@ -1,0 +1,198 @@
+/* Streak Calendar Styles - Forest Aesthetic */
+
+.calendar-page-container {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+  overflow-y: auto;
+  max-height: 85vh;
+}
+
+.calendar-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.calendar-title-group h1 {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.calendar-title-group p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Streak KPI strip */
+.streak-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.streak-summary-card {
+  background: rgba(10, 18, 14, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.streak-card-val {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.streak-card-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Calendar Card Container */
+.calendar-card {
+  background: rgba(10, 18, 14, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+}
+
+.calendar-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.calendar-nav-bar h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.month-nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.month-nav-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+.month-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+/* Days of Week Row */
+.weekdays-header-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+/* Month Day Grid */
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.calendar-day-cell {
+  aspect-ratio: 1;
+  border-radius: var(--radius-xs);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-day-cell:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.calendar-day-cell.other-month {
+  opacity: 0.25;
+}
+
+.calendar-day-cell.today {
+  border-color: #e9c46a;
+  box-shadow: 0 0 8px rgba(233, 196, 106, 0.3);
+}
+
+.calendar-day-cell.active-focus {
+  background: rgba(45, 106, 79, 0.25);
+  border-color: #52b788;
+}
+
+.calendar-day-cell.active-focus.intense {
+  background: linear-gradient(135deg, rgba(45, 106, 79, 0.45), rgba(233, 196, 106, 0.2));
+  border-color: #e9c46a;
+}
+
+.day-number {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.day-activity-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: #e9c46a;
+  font-weight: 700;
+}
+
+.day-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: #e9c46a;
+  box-shadow: 0 0 6px rgba(233, 196, 106, 0.4);
+}
+
+@media (max-width: 640px) {
+  .streak-kpi-strip {
+    grid-template-columns: 1fr;
+  }
+}

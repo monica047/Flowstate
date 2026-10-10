@@ -1,0 +1,145 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 580px;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
+
+/* Prompt / Active Task line */
+.focus-prompt-container {
+  margin-bottom: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.focus-prompt-title {
+  font-family: var(--font-sans);
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.focus-task-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(10, 18, 14, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1rem;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.focus-task-pill:hover {
+  background: rgba(18, 30, 24, 0.9);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.focus-task-pill .task-tag {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Modes: FOCUS / SHORT BREAK / LONG BREAK */
+.timer-modes {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.timer-mode-btn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 0.35rem 0.2rem;
+  position: relative;
+  transition: color var(--transition-fast);
+  border-bottom: 2px solid transparent;
+}
+
+.timer-mode-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.timer-mode-btn.active {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.5);
+}
+
+/* Big Hero Timer Numbers */
+.timer-clock {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 18vw, 11rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow: 0 8px 36px rgba(0, 0, 0, 0.65);
+  margin-bottom: 2.25rem;
+  user-select: none;
+}
+
+/* Control Buttons Row */
+.timer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+}
+
+.timer-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: rgba(10, 18, 14, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-fast);
+}
+
+.timer-control-btn:hover {
+  background: rgba(20, 34, 27, 0.9);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.timer-control-btn.primary {
+  width: 66px;
+  height: 66px;
+  background: #ffffff;
+  color: #070e0a;
+  border: none;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+}
+
+.timer-control-btn.primary:hover {
+  background: #f1f5f3;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.timer-control-btn.primary:active {
+  transform: translateY(1px) scale(0.98);
+}

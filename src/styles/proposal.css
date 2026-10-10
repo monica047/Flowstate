@@ -1,0 +1,148 @@
+/* Proposal & Quick Panels Styles - Forest Aesthetic */
+
+.quick-panel {
+  position: absolute;
+  z-index: 30;
+  background: rgba(10, 18, 14, 0.94);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  width: 360px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.quick-panel.tasks-panel {
+  bottom: 84px;
+  left: 2.5rem;
+}
+
+.quick-panel.themes-panel {
+  bottom: 84px;
+  right: 2.5rem;
+}
+
+.quick-panel.stats-panel {
+  bottom: 84px;
+  right: 2.5rem;
+}
+
+.quick-panel-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quick-panel-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quick-panel-body {
+  padding: 1rem 1.25rem;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+/* Quick Task Item */
+.quick-task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.quick-task-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.quick-task-item.selected {
+  border-color: var(--color-primary);
+  background: rgba(233, 196, 106, 0.12);
+}
+
+.quick-task-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.quick-task-checkbox.checked {
+  background: #2d6a4f;
+  border-color: #2d6a4f;
+}
+
+.quick-task-text {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.quick-task-text.completed {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+/* Theme Thumbnails */
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.theme-card-thumb {
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.theme-card-thumb:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.theme-card-thumb.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 12px var(--color-primary-glow);
+}
+
+.theme-thumb-preview {
+  height: 54px;
+  border-radius: var(--radius-xs);
+}
+
+.theme-thumb-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .quick-panel {
+    width: 90vw;
+    left: 5vw !important;
+    right: 5vw !important;
+  }
+}

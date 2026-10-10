@@ -1,0 +1,8 @@
+{
+  "name": "Flowstate",
+  "description": "A Pomodoro productivity web app with calm ambient themes, functional focus timer, XP levels, task management, streak calendar, and deep analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
