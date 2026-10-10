@@ -2,7 +2,7 @@
 
 A distraction-free Pomodoro focus timer and productivity tracking application with forest-inspired aesthetics. Built with React, modular standard CSS stylesheets, Web Audio API sound synthesis, and persistent client-side storage.
 
-Public Application URL: https://ais-pre-6ybs2tcanncoeaslzuajhw-929894199263.asia-southeast1.run.app
+Public Application URL: https://flowstate-0718.ai.studio/
 
 ---
 
